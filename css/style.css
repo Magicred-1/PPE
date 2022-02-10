@@ -1,0 +1,204 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Just+Another+Hand&display=swap');
+html{
+    font-size: 62.5%; 
+/* 16px * 62,5 10.00rem */
+}
+body{
+  font: 1.6rem sans-serif;
+  padding: 0;
+  margin: 0;
+}
+*{
+    box-sizing: border-box; /* 100px largeur + 10px padding + 1px border */
+}
+ul, 
+ol, 
+p,
+button,
+figure, 
+blockquote, h1, h2, h3, address{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    font-style: normal;
+    
+
+}
+button{
+    background: transparent;
+    font-size: inherit;
+    border: 0;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+img {
+    display : inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+section ul li img {
+    transition-duration: .25s;
+}
+section ul li img:hover {
+    transform: scale(1.15);
+}
+.material-icons{
+    vertical-align: .5rem;
+    font-size: 3rem;
+}
+:root {
+    --color-default : rgb(218, 211, 211);
+    --color-primary : rgb(184, 56, 59);
+    --color-secondary : rgb(88, 133, 162);
+    --color-warning : #ac2a14;
+    --color-success : #17973e;
+    --color-background : rgb(101, 71, 64);
+}
+html {
+    background-color: var(--color-background);
+    color: var(--color-default);
+}
+
+/* End of reset CSS */
+
+/* Header CSS */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header a img{
+    max-width: 13rem;
+}
+header img{
+    max-width: 13rem;
+}
+header h1{
+    padding: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    border: solid .4rem var(--default);
+    border-radius: 1rem;
+    background-color: var(--secondary);
+}
+header span {
+    background-color: var(--color-primary);
+    padding: .8rem;
+    border-radius: 1rem;
+}
+header em {
+    background-color: rgb(249, 245, 245);
+    border: solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+} 
+
+/* End Header CSS */
+
+main {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: block;
+}
+main section {
+    padding: 1rem;
+}
+main section ul {
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+    grid-gap: 7rem;
+}
+main h2 {
+    text-align: center;
+}
+main p {
+    padding: 3rem;
+    margin : 0.5rem;
+    text-align: center;
+    border: solid .2rem var(--color-default);
+}
+main a {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    margin: 1rem auto;
+    display: block;
+    max-width: 25rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+main a:hover {
+    color: var(--color-secondary);
+    transition: all .2s ease-in;
+}
+
+/* CSS for Form */
+
+input, textarea, select {
+    padding: 1.8rem;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--color-background);
+    resize: none;
+    color: var(--color-default);
+    border-radius: 1rem;
+    margin: 0 0 2rem;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input[type="submit"] {
+        padding: 2rem;
+        background-color: var(--color-primary);
+        margin: 1rem auto;
+        display: block;
+        max-width: 25rem;
+        text-align: center;
+    }
+input[type="submit"]:hover {
+        color: var(--color-secondary);
+        transition: all .2s ease-in;
+}
+
+.dark 
+
+/* End of Form CSS */
+
+footer {
+    margin: 0 auto;
+    display: block;
+}
+footer p {
+    text-align: center;
+}
+@media screen and (max-width: 60rem){
+    header{
+        display: block;
+    }
+    header img{
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+    header em {
+        display: table;
+    } 
+    main section ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        margin: 0 auto;
+    }
+    main section ul li img {
+        max-width: 20rem;
+    }
+}
