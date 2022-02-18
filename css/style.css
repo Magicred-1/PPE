@@ -9,7 +9,9 @@ body{
   font: 1.6rem sans-serif;
   padding: 0;
   margin: 0;
+  text-rendering: optimizeLegibility;s
 }
+
 *{
     box-sizing: border-box; /* 100px largeur + 10px padding + 1px border */
 }
@@ -24,13 +26,12 @@ blockquote, h1, h2, h3, address{
     border: 0;
     list-style: none;
     font-style: normal;
-    
-
 }
 button{
     background: transparent;
     font-size: inherit;
     border: 0;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -43,6 +44,13 @@ img {
     object-fit: cover;
     vertical-align: middle;
 }
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 section ul li img {
     transition-duration: .25s;
 }
@@ -59,7 +67,8 @@ section ul li img:hover {
     --color-secondary : rgb(84, 149, 192);
     --color-warning : #ac2a14;
     --color-success : #17973e;
-    --color-background : rgb(101, 71, 64);
+    --color-background : rgb(141, 98, 88);
+    --color-background-secondary : rgb(249, 245, 245);
 }
 html {
     background-color: var(--color-background);
@@ -95,7 +104,7 @@ header span {
     border-radius: 1rem;
 }
 header em {
-    background-color: rgb(249, 245, 245);
+    background-color: var(--color-background-secondary);
     border: solid var(--color-primary);
     border-radius: 1rem;
     padding: 1rem;
@@ -113,8 +122,9 @@ main section {
 }
 main section ul {
     display: grid;
-    grid-template-columns: repeat(5, 5fr);
-    grid-gap: 7rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .7rem;
+    padding: .7rem;
 }
 main h2 {
     text-align: center;
