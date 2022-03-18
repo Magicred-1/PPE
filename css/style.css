@@ -9,7 +9,7 @@ body{
   font: 1.6rem sans-serif;
   padding: 0;
   margin: 0;
-  text-rendering: optimizeLegibility;s
+  text-rendering: optimizeLegibility;
 }
 
 *{
@@ -55,9 +55,7 @@ section ul li img {
     transition-duration: .25s;
     border: solid .4rem var(--color-default);
 }
-section ul li img:hover {
-    transform: scale(1.15);
-}
+
 .material-icons{
     vertical-align: .5rem;
     font-size: 3rem;
@@ -106,6 +104,7 @@ header span {
 }
 header em {
     background-color: var(--color-background-secondary);
+    color: rgb(0, 0, 0);
     border: solid var(--color-primary);
     border-radius: 1rem;
     padding: 1rem;
@@ -213,4 +212,94 @@ footer p {
     main section ul li img {
         max-width: 20rem;
     }
+}
+main .grid-picture-large{
+    display:  grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+ul figure{
+    position: relative;
+}
+ul figure .material-icons{
+    vertical-align: -.4rem;
+}
+/* Overley effect */
+ul figure figcaption{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    transform-origin: center center;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+ul figure:hover figcaption{
+    transform: scale(1);
+}
+/* modale */
+.parent-modale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.parent-modale .modale{
+    max-width: 40rem;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+.parent-modale .modale .desc{
+    position: static;
+    transition: none;
+    background-color: #fff;
+    color: #222;
+    
+}
+.modale-active{
+    z-index: 1;
+    opacity: 1;
+    transform-origin: center center;
+}
+.parent-modale .modale .desc h3{
+    font-size: x-large;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+}
+.parent-modale .modale .desc p :is(time){
+    padding: 1rem;
+}
+.parent-modale .modale button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
 }
