@@ -102,13 +102,17 @@ header span {
     padding: .8rem;
     border-radius: 1rem;
 }
+header span a{
+    color: var(--color-default);
+    text-decoration: none;
+}
 header em {
     background-color: var(--color-background-secondary);
     color: rgb(0, 0, 0);
     border: solid var(--color-primary);
     border-radius: 1rem;
     padding: 1rem;
-} 
+}
 
 /* End Header CSS */
 
@@ -248,7 +252,7 @@ ul figure:hover figcaption{
 }
 /* modale */
 .parent-modale{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
