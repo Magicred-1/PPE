@@ -61,14 +61,15 @@ section ul li img {
     font-size: 3rem;
 }
 :root {
-    --color-default : rgb(238, 238, 238);
-    --color-primary : rgb(184, 56, 59);
+    --color-default : #FBF9FF;
+    --color-primary : #B3B7EE;
     --color-secondary : rgb(84, 149, 192);
     --color-warning : #ac2a14;
     --color-success : #17973e;
-    --color-background : rgb(141, 98, 88);
+    --color-background : #92B9BD;
     --color-background-secondary : rgb(249, 245, 245);
 }
+
 html {
     background-color: var(--color-background);
     color: var(--color-default);
@@ -129,6 +130,12 @@ main section ul {
     grid-template-columns: repeat(5, 1fr);
     gap: .7rem;
     padding: .7rem;
+}
+main p.warning {
+    color: var(--color-warning);
+    background-color: var(--color-background-secondary);
+    border: solid rgb(59, 59, 59);
+    font-weight: bold;
 }
 main h2 {
     text-align: center;

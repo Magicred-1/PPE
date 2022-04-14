@@ -120,7 +120,8 @@
                 </li>
             </ul>
         </section>
-      
+        
+        <?php include_once './src/formulaire_verif.inc.php'; ?>           
         <form action="#" method="post">
             <label for="nom">Votre nom : </label>
             <input type="text" id="nom" name="nom" placeholder="Myxa" required autofocus>
