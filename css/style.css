@@ -62,7 +62,7 @@ section ul li img {
 }
 :root {
     --color-default : #FBF9FF;
-    --color-primary : #B3B7EE;
+    --color-primary : #636ce2;
     --color-secondary : rgb(84, 149, 192);
     --color-warning : #ac2a14;
     --color-success : #17973e;
@@ -71,7 +71,11 @@ section ul li img {
 }
 
 html {
-    background-color: var(--color-background);
+    background: linear-gradient(rgba(27, 14, 209, 0.3),transparent), url(../asset/img/sports_background.jpg) no-repeat scroll center center / cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: var(--color-default);
 }
 
@@ -129,13 +133,14 @@ main section ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .7rem;
-    padding: .7rem;
+    padding: .7rem; 
 }
-main p.warning {
-    color: var(--color-warning);
-    background-color: var(--color-background-secondary);
-    border: solid rgb(59, 59, 59);
-    font-weight: bold;
+main section p {
+        padding: 3rem;
+        margin : 0.5rem;
+        text-align: center;
+        border: solid .2rem var(--color-default);
+        background: var(--color-primary);
 }
 main h2 {
     text-align: center;
@@ -145,6 +150,12 @@ main p {
     margin : 0.5rem;
     text-align: center;
     border: solid .2rem var(--color-default);
+}
+main p.warning {
+    color: var(--color-warning);
+    background-color: var(--color-background-secondary);
+    border: solid rgb(59, 59, 59);
+    font-weight: bold;
 }
 main a {
     padding: 2rem;
@@ -163,12 +174,17 @@ main a:hover {
 
 /* CSS for Form */
 
+form label {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
 input, textarea, select {
     padding: 1.8rem;
     width: 100%;
     font-size: 1.5rem;
     resize: none;
-    color: var(--color-default);
+    color: #000000;
     border-radius: 1rem;
     margin: 0 0 2rem;
 }
@@ -185,9 +201,10 @@ input[type="submit"] {
         text-align: center;
     }
 input[type="submit"]:hover {
-        color: var(--color-secondary);
+        color: var(--color-default);
         transition: all .2s ease-in;
 }
+
 
 
 /* End of Form CSS */

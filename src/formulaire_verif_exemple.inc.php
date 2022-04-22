@@ -1,8 +1,8 @@
 <?php
             try {
-                $_host = "";
-                $_dbname = "";
-                $_user = "";
+                $_host = "localhost";
+                $_dbname = "ppe_web";
+                $_user = "root";
                 $_password = getenv('MYSQL_SECURE_PASSWORD');
 
                 $_pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -23,7 +23,7 @@
                     $_ville = $_POST['ville'];
                     $_email = $_POST['email'];
 
-                    if(strlen($_prenom) > 6 || strlen($_nom) > 20 || strlen($_ville) > 6 || strlen($_email) > 10)
+                    if(strlen($_prenom) > 6 || strlen($_nom) > 6 || strlen($_ville) > 6 || strlen($_email) > 10)
                     {
                         if(is_numeric($_prenom) || is_numeric($_nom) || is_numeric($_ville) || is_numeric($_email))
                         {

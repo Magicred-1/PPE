@@ -36,7 +36,7 @@ CREATE TABLE `client` (
   `villeClient` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
+-- dans la table client, on ajoute un champ idClient qui est l'identifiant du client
 -- Déchargement des données de la table `client`
 --
 
@@ -48,7 +48,7 @@ INSERT INTO `client` (`idClient`, `nomClient`, `prenomClient`, `emailClient`, `a
 
 -- --------------------------------------------------------
 
---
+-- 
 -- Structure de la table `date`
 --
 
