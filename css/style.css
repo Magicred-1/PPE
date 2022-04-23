@@ -173,6 +173,12 @@ main a:hover {
 }
 
 /* CSS for Form */
+form {
+    background: var(--color-background-secondary);
+    padding: 1rem;
+    border: solid 0.4rem #eee;
+    border-radius: 1rem;
+}
 
 form label {
     font-weight: bold;
@@ -239,6 +245,12 @@ footer p {
     }
     main section ul li img {
         max-width: 20rem;
+    }
+    main .grid-picture-large {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
 }
 main .grid-picture-large{

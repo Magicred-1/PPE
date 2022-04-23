@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", e => {
 
     open_modal = function () {
         console.log(this.dataset);
-        /* data attributes */
+        /* Data attributes in variables */
         let image = this.dataset.image;
         let title = this.dataset.title;
         let desc = this.dataset.description;
         let dates = this.dataset.dates;
-        /* add the active class */
+        /* Add the active class */
         modal.classList.add("modale-active"); 
-        /* getting all the HTML elements */
+        /* Getting all the HTML elements */
         document.querySelector(".modale img").setAttribute("src", image);
         document.querySelector(".modale .desc h3").innerText = title;
         document.querySelector(".modale .desc p").innerHTML = `<strong>Description : </strong>${desc}`;

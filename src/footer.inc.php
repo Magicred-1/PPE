@@ -1,5 +1,5 @@
- <!-- modale  -->
- <div class="parent-modale" role="dialog">
+        <!-- modale  -->
+        <div class="parent-modale" role="dialog">
             <figure class="modale">
                 <button aria-label="closed">
                     <i class="fa-solid fa-close" aria-hidden="true"></i>
@@ -19,6 +19,5 @@
         <p>&copy; - Streaming - 2022.</p>
     </footer>
     <script src="./js/app.js"></script>
-    <script src="./js/rand_img.js"></script>
 </body>
 </html>

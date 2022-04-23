@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./asset/img/logo_tf2.png" />
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" crossorigin="anonymous">
 
     <title>PPE - Djason G.</title>
@@ -25,7 +24,7 @@
         <section>
             <p>
                 Tous les mois profitez de toutes les nouveautés et opportunités.
-                A partir du mois prochain on vous propose toutes les séance de 
+                À partir du mois prochain on vous propose toutes les séance de 
                 sport sur vos support préférés.
             </p>
         </section>
