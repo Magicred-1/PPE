@@ -16,6 +16,7 @@
         <a href="./"><img src="./asset/img/logo_tf2.png" alt="logo site streaming"></a>
         <h1><span> Des Ligues - Tous Les Sports</span></h1>
         <em id="toggle" class="fa fa-adjust"></em>
+        <?php session_status() == PHP_SESSION_ACTIVE ? print $_SESSION['email'] : print '<a href="./login.php"><p>Se connecter </p></a> '; ?>
     </header>
     <main>
 
