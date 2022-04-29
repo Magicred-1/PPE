@@ -22,7 +22,10 @@
         <a href="./"><img src="./asset/img/logo_tf2.png" alt="logo site streaming"></a>
         <h1><span> Des Ligues - Tous Les Sports</span></h1>
         <?php 
-            isset($_SESSION['email']) ? print '<p>Bienvenue, '.$_SESSION['email'].' <a id="logout" href="./deconnexion.php"><i class="fa <i class="fa fa-sign-out-alt"></i> Déconnexion</a></p>' : print '<p><a id="logout" href="./login.php"><i class="fa fa-sign-in-alt"></i> Connexion</a></p>';
+            isset($_SESSION['email']) ? print '<p>Bienvenue, '.$_SESSION['email'].' 
+            <a id="logout" href="./deconnexion.php"><i class="fa fa-sign-out-alt"></i> Déconnexion</a> 
+            <a id="user" href="./espace_membre.php"><i class="fa fa-user"></i> Espace Membre</a></p>' 
+            : print '<p><a id="logout" href="./login.php"><i class="fa fa-sign-in-alt"></i> Connexion</a></p>';
         ?>
     </header>
     <main>

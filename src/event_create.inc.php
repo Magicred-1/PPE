@@ -17,20 +17,20 @@
             foreach ($_eventIMG as $_imageInfos)
             {
                 for ($i = 1; $i < $_numberEvent; $i++)
-                        echo "<li data-image=\"{$_imageInfos['imageEvenement']}\"";
-                        echo "data-title=\"{$_imageInfos['nomEvenement']}\"";
-                        echo "data-description=\"{$_imageInfos['descEvenement']}\"";
-                        echo "data-dates=\"{$_imageInfos['date_creation_evenement']}\">";
-                        echo "<figure>";
-                            echo "<img src=\"{$_imageInfos['imageEvenement']}\" alt=\"{$_imageInfos['descEvenement']}\">";
-                            echo '<figcaption>';
-                                echo '<h2>';
-                                    echo "<i class=\"fa-solid fa-magnifying-glass\" aria-hidden=\"true\"></i>";
-                                    echo "<em class=\"fa-solid fa-page\"></em> Agrandir";
-                                echo '</h2>';
-                            echo "</figcaption>";
-                        echo "</figure>";
-                    echo "</li>";
+                        print "<li data-image=\"{$_imageInfos['imageEvenement']}\"";
+                        print "data-title=\"{$_imageInfos['nomEvenement']}\"";
+                        print "data-description=\"{$_imageInfos['descEvenement']}\"";
+                        print "data-dates=\"{$_imageInfos['date_creation_evenement']}\">";
+                        print "<figure>";
+                            print "<img src=\"{$_imageInfos['imageEvenement']}\" alt=\"{$_imageInfos['descEvenement']}\">";
+                            print '<figcaption>';
+                                print '<h2>';
+                                    print "<i class=\"fa-solid fa-magnifying-glass\" aria-hidden=\"true\"></i>";
+                                    print "<em class=\"fa-solid fa-page\"></em> Agrandir";
+                                print '</h2>';
+                            print "</figcaption>";
+                        print "</figure>";
+                    print "</li>";
             }
         }
     };

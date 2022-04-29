@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", e => {
     closed = document.querySelector(".modale button");
     closed_all = document.querySelector(".modale img");
     body = document.querySelector("body");
-    randImg = document.querySelectorAll("li > figure > img");
-    randImgModale = document.querySelectorAll("section > ul > li");
-    linkAPI = 'https://loremflickr.com/500/500/Sports_?random=${num}';
     /* property elements */
 
     open_modal = function () {
@@ -48,12 +45,11 @@ document.addEventListener("DOMContentLoaded", e => {
         body.style = "overflow: scroll";
     });
 
-    /* generate a random date for the images */
+    /* 
     const randomDate = (start, end) => {
         return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
     }
 
-    /* add elements */
     const randGenerator = () => {
 
         for (let i = 0; i < randImg.length; i++) 
@@ -71,4 +67,5 @@ document.addEventListener("DOMContentLoaded", e => {
               }
             }
             randGenerator();
+    */
 });

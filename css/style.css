@@ -133,6 +133,21 @@ header a[id="logout"]:hover {
     padding: 1rem;
 }
 
+header a[id="user"] {
+    background-color: var(--color-background-secondary);
+    color: rgb(0, 0, 0);
+    border: solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+header a[id="user"]:hover {
+    background-color: var(--color-primary);
+    color: rgb(0, 0, 0);
+    border: solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
 /* End Header CSS */
 
 main {
@@ -224,17 +239,72 @@ input[type="submit"]:hover {
         color: var(--color-default);
         transition: all .2s ease-in;
 }
+table, td, th {
+    border: 1px solid black;
+    background-color: var(--color-default);
+    text-align: center;
+    color: var(--color-primary);
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
 
 
 /* End of Form CSS */
 
-footer {
-    margin: 0 auto;
-    display: block;
+footer{
+	border-top: solid .3rem var(--color-default);
+    background-color: var(--color-primary);
+    color: var(--color-default);
 }
-footer p {
-    text-align: center;
+footer p{
+	text-align: center;
+	padding: 1rem;
+	letter-spacing: 0.082em;
+	font-weight: 900;
+}
+.cate{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    padding: 3rem;
+}
+.cate img{
+	max-width: 20rem;
+	display: flex;
+	height: auto;
+	width: auto;
+	padding-top: 3rem;
+	display: inline-block;
+	vertical-align: center;
+    margin: 0 auto;
+}
+.cate section{
+	display: inline-block;
+	vertical-align: center;
+	padding: 3rem;
+}
+.cate h2{
+	padding-top: 2rem;
+    font-weight: 800;
+}
+.cate section ul{
+    width: 100%;
+    margin: 3rem auto;
+	align-items: center;
+}
+.cate section ul li{
+    padding-bottom: 1rem;
+}
+.cate section ul li:hover{
+	text-decoration: underline;
+}
+.cate section ul li a{
+    color: var(--color-default);
+    padding-bottom: 1rem;
+    font-style: italic;
 }
 @media screen and (max-width: 60rem){
     header{
@@ -266,6 +336,19 @@ footer p {
         gap: 1rem;
         padding: 1rem;
     }
+    footer .cate{
+        padding: 1rem;
+		grid-template-columns: repeat(1, 1fr);
+    }
+	footer img{
+		max-width: 10rem;
+	}
+	footer .cate section{
+		padding: 0rem;
+	}
+	footer .cate{
+		text-align: center;
+	}
 }
 main .grid-picture-large{
     display:  grid;

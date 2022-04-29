@@ -1,9 +1,7 @@
 <?php 
     include_once './src/header.inc.php';
     // require_once './src/event_create.inc.php';
-    include_once './src/espace_membre.inc.php';
 ?>
-
         <section>
             <ul class="grid-picture-large">
             <?php // fetchEventInfos($_fetchEventRequest, 2); ?>
