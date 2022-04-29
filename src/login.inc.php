@@ -1,44 +1,42 @@
 <?php
-    <?php
-    try {
-        $_host = "localhost";
-        $_dbname = "ppe_web";
-        $_user = "root";
-        $_password = getenv('MYSQL_SECURE_PASSWORD');
+require_once './src/connect_DB.inc.php';
 
-        $_pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            
-        $_bdd = new PDO("mysql:host={$_host};dbname={$_dbname};", $_user, $_password);
-        array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$_pdo_options);
-        }
-        catch(Exception $e)
+        if(isset($_POST['email']) && isset($_POST['mdp']))
         {
-            die('Erreur : '.$e->getMessage());
-        }
-
-        if(isset($_POST['email']) && isset($_POST['mdp']))){
-        {
-
             $_email = $_POST['email'];
             $_mdp = $_POST['mdp'];
-
-            if(strlen($_email) > 10 || strlen($_mdp) > 6){
+            
+            if(strlen($_email) > 10 && strlen($_mdp) > 5)
             {
-                if(!filter_var($_email, FILTER_VALIDATE_EMAIL)) {
+                if(is_numeric($_email))
+                {
+                    print "<p class=\"warning\"> veuillez saisir des lettres</p>";
+                }
+                elseif(!filter_var($_email, FILTER_VALIDATE_EMAIL)) 
+                {
                     print "<p class=\"warning\"> veuillez saisir un email valide</p>";
                 }
                 else 
                 {
-                    $_bdd->exec("SELECT FROM `client`(nomClient, prenomClient, ageClient, villeClient, emailClient) VALUES ('$_nom','$_prenom','$_age','$_ville','$_email')");
-                    print "<p class=\"success\"> Connexion réussie </p>";
-                    session_start();
-                    $_SESSION['email'] = $_email;
-                    $_SESSION['mdp'] = $_mdp;
-                    header('Location: ./index.php');
-                }
-                else {
-                    print "<p class=\"warning\"> Veuillez saisir un mot de passe valide</p>";
-                }
-            }  
+                    $_req = $_bdd->prepare("SELECT nomClient, prenomClient, emailClient FROM client WHERE emailClient = :email AND mdpClient = :mdp");
+                    $_req -> execute(array(
+                        'email' => $_email
+                        ,'mdp' => $_mdp
+                    ));
+                    if ($_req) 
+                    {
+                        print "<p class=\"success\"> Connexion réussie </p>";
+
+                        $_SESSION['email'] = $_email;
+
+                        sleep(3);
+                        header('Location: ./index.php');
+                    }
+                    else
+                    {
+                        die("<p class=\"warning\"> Cet email est déjà utilisé </p>");
+                    }
+                } 
         }
+    }
 ?>

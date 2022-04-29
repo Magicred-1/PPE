@@ -118,6 +118,20 @@ header em {
     border-radius: 1rem;
     padding: 1rem;
 }
+header a[id="logout"] {
+    background-color: var(--color-background-secondary);
+    color: rgb(0, 0, 0);
+    border: solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+header a[id="logout"]:hover {
+    background-color: var(--color-primary);
+    color: rgb(0, 0, 0);
+    border: solid var(--color-primary);
+    border-radius: 1rem;
+    padding: 1rem;
+}
 
 /* End Header CSS */
 

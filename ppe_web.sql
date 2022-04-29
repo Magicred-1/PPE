@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 14 avr. 2022 à 20:21
+-- Généré le : sam. 23 avr. 2022 à 18:40
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.2
 
@@ -32,23 +32,14 @@ CREATE TABLE `client` (
   `nomClient` varchar(64) NOT NULL,
   `prenomClient` varchar(64) NOT NULL,
   `emailClient` varchar(64) NOT NULL,
+  `mdpClient` varchar(64) NOT NULL,
   `ageClient` tinyint(4) NOT NULL,
   `villeClient` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- dans la table client, on ajoute un champ idClient qui est l'identifiant du client
--- Déchargement des données de la table `client`
---
-
-INSERT INTO `client` (`idClient`, `nomClient`, `prenomClient`, `emailClient`, `ageClient`, `villeClient`) VALUES
-(1, 'Ambroise', 'Damien', 'test@grgr.com', 27, 'Marseille'),
-(2, 'Mahamadou', 'Gassama', 'test@grgr.com', 24, 'Mulhouse'),
-(3, 'Fermier', 'Valérie', 'test@grgr.com', 58, 'Toulouse'),
-(4, 'Adolphe', 'Nobel', 'test@grgr.com', 17, 'Paris');
-
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `date`
 --
 
@@ -101,7 +92,7 @@ ALTER TABLE `evenement`
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `evenement`

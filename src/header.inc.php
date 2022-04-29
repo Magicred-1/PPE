@@ -1,3 +1,9 @@
+<?php
+    ob_start();
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,8 +21,9 @@
     <header>
         <a href="./"><img src="./asset/img/logo_tf2.png" alt="logo site streaming"></a>
         <h1><span> Des Ligues - Tous Les Sports</span></h1>
-        <em id="toggle" class="fa fa-adjust"></em>
-        <?php session_status() == PHP_SESSION_ACTIVE ? print $_SESSION['email'] : print '<a href="./login.php"><p>Se connecter </p></a> '; ?>
+        <?php 
+            isset($_SESSION['email']) ? print '<p>Bienvenue, '.$_SESSION['email'].' <a id="logout" href="./deconnexion.php"><i class="fa <i class="fa fa-sign-out-alt"></i> Déconnexion</a></p>' : print '<p><a id="logout" href="./login.php"><i class="fa fa-sign-in-alt"></i> Connexion</a></p>';
+        ?>
     </header>
     <main>
 
