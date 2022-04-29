@@ -245,11 +245,16 @@ table, td, th {
     text-align: center;
     color: var(--color-primary);
   }
+
+td {
+    padding: 1rem;
+}
   
-  table {
+table {
     border-collapse: collapse;
     width: 100%;
-  }
+    margin: 0 0 1rem;
+}
 
 
 
@@ -259,6 +264,7 @@ footer{
 	border-top: solid .3rem var(--color-default);
     background-color: var(--color-primary);
     color: var(--color-default);
+    margin: 1rem 0 0 0;
 }
 footer p{
 	text-align: center;

@@ -1,3 +1,18 @@
+<!-- modale -->
+<div class="parent-modale" role="dialog" aria-label="true">
+    <figure class="modale">
+        <button aria-label="closed">
+            <span class="material-icons">clear</span>
+        </button>
+        <img src="https://via.placeholder.com/500" alt="picture" />
+        <figcaption class="desc">
+            <h3>title</h3>
+            <p></p>
+            <time datetime="2022-03-20">Years :</time>
+        </figcaption>
+    </figure>
+</div>
+</main>
 <footer>
     <div class="cate">
         <img src="./asset/img/sports_icon.png" alt="Sports Icon" />
@@ -26,7 +41,7 @@
                     <a href="mailto:djasongadiou@gmail.com"><i class="fa fa-envelope"></i> Mail</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://github.com/Magicred-1/" target="blank_"><i class="fa-brands fa-github"></i> GitHub</a>
                 </li>
             </ul>
         </section>

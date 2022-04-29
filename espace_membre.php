@@ -1,4 +1,7 @@
-<?php include_once './src/header.inc.php'; ?>
+<?php 
+    include_once './src/header.inc.php'; 
+?>
+
 <section>
             <ul class="grid-picture-large">
                 <li data-image="./asset/img/limitless_tf2_poster.png"
@@ -88,9 +91,7 @@
                 </li>
             </ul>
         </section>
-
 <?php 
     include_once './src/espace_membre.inc.php';
+    include_once './src/footer.inc.php';
 ?>
-</main>
-<?php include_once './src/footer.inc.php'; ?>

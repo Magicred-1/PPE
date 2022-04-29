@@ -1,6 +1,7 @@
 <?php
     include_once './src/header.inc.php'; 
-    if (isset($_SESSION['prenom'])) {
+    if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
+    {
         header ('Location: ./');
     }
 ?>
@@ -118,5 +119,5 @@
             <input type="submit" value="Envoyer">
 
         </form>
-
-        <?php include_once './src/footer.inc.php'; ?>
+</main>
+<?php include_once './src/footer.inc.php'; ?>

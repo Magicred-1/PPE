@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
     require_once './src/connect_DB.inc.php';
 
     $_emailUser = $_SESSION['email'];
-    $_req = $_bdd->prepare("SELECT nomClient, prenomClient, ageClient, emailClient, villeClient FROM client WHERE emailClient = :email");
+    $_req = $_bdd->prepare("SELECT nomClient, prenomClient, emailClient, ageClient, villeClient FROM client WHERE emailClient = :email");
     $_req -> execute(array(
         'email' => $_emailUser
     ));
@@ -20,15 +20,15 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
                     .'<tr>'
                         .'<th>Nom</th>'
                         .'<th>Prenom</th>'
-                        .'<th>Âge</th>'
                         .'<th>Email</th>'
+                        .'<th>Âge</th>'
                         .'<th>Ville</th>'
                     .'</tr>'
                     .'<tr>'
                         .'<td>'.$_user['nomClient'].'</td>'
                         .'<td>'.$_user['prenomClient'].'</td>'
-                        .'<td>'.$_user['ageClient'].'</td>'
                         .'<td>'.$_user['emailClient'].'</td>'
+                        .'<td>'.$_user['ageClient'].'</td>'
                         .'<td>'.$_user['villeClient'].'</td>'
                     .'</tr>'
                 .'</table>';

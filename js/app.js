@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", e => {
     console.log(navigator.userAgent);
 
-    let el, modal, closed, open_modal, closed_all, body,randImg,randImgModale,linkAPI;
+    let el, modal, closed, open_modal, closed_all, body;
 
     el = document.querySelectorAll(".grid-picture-large li");
     modal = document.querySelector(".parent-modale");

@@ -1,6 +1,6 @@
 <?php 
     include_once './src/header.inc.php'; 
-    if (isset($_SESSION['prenom'])) 
+    if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
     {
         header ('Location: ./');
     }
