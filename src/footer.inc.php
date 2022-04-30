@@ -2,7 +2,7 @@
 <div class="parent-modale" role="dialog" aria-label="true">
     <figure class="modale">
         <button aria-label="closed">
-            <span class="material-icons">clear</span>
+            <i class="fa-solid fa-times" aria-hidden="true"></i>
         </button>
         <img src="https://via.placeholder.com/500" alt="picture" />
         <figcaption class="desc">

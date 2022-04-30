@@ -23,18 +23,19 @@ require_once './src/connect_DB.inc.php';
                         'email' => $_email
                         ,'mdp' => $_mdp
                     ));
-                    if ($_req) 
-                    {
-                        print "<p class=\"success\"> Connexion réussie </p>";
+                    $_verify = $_req->fetch(PDO::FETCH_ASSOC);
 
+                    if ($_req || password_verify($_mdp, $_verify['mdpClient']))
+                    {
                         $_SESSION['email'] = $_email;
 
+                        print "<p class=\"success\"> Vous êtes connecté </p>";
                         sleep(3);
                         header('Location: ./index.php');
                     }
                     else
                     {
-                        die("<p class=\"warning\"> Cet email est déjà utilisé </p>");
+                        print "<p class=\"warning\"> Email ou mot de passe incorrect </p>";
                     }
                 } 
         }

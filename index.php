@@ -268,8 +268,15 @@
                 </li>
             </ul>
         </section>
-            
-        <a href="./formulaire.php">Cliquez ici pour commencer</a>
+        <?php 
+            if(isset($_SESSION['email'])){
+                echo '';
+            } 
+            else
+            {
+                echo '<a href="./formulaire.php">Cliquez ici pour commencer</a>';
+            }
+        ?>
 
     </main>
 <?php include_once './src/footer.inc.php'; ?>
