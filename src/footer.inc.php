@@ -46,7 +46,7 @@
             </ul>
         </section>
     </div>
-    <p> &copy; Streaming | Tous droits réservés - Djason Gadiou | </p>
+    <p> &copy; Sports | Tous droits réservés - Djason Gadiou | </p>
 </footer>
 <script src="./js/app.js"></script>
 </body>

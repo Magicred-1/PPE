@@ -44,7 +44,9 @@ CREATE TABLE `client` (
 --
 
 CREATE TABLE `date` (
-  `dateConsultation` datetime NOT NULL
+  `idClient` int(11) NOT NULL,
+  `dateConsultation` datetime NOT NULL,
+  FOREIGN KEY (`idClient`) REFERENCES `client`(`idClient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------

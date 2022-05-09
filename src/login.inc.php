@@ -10,11 +10,11 @@ require_once './src/connect_DB.inc.php';
             {
                 if(is_numeric($_email))
                 {
-                    print "<p class=\"warning\"> veuillez saisir des lettres</p>";
+                    print "<p class=\"warning\"> Veuillez saisir des lettres</p>";
                 }
                 elseif(!filter_var($_email, FILTER_VALIDATE_EMAIL)) 
                 {
-                    print "<p class=\"warning\"> veuillez saisir un email valide</p>";
+                    print "<p class=\"warning\"> Veuillez saisir un email valide</p>";
                 }
                 else 
                 {
@@ -27,17 +27,25 @@ require_once './src/connect_DB.inc.php';
 
                     if ($_req || password_verify($_mdp, $_verify['mdpClient']))
                     {
-                        $_SESSION['email'] = $_email;
+                        $_donnees = $_req->fetchAll();
 
-                        print "<p class=\"success\"> Vous êtes connecté </p>";
-                        sleep(3);
-                        header('Location: ./index.php');
+                        foreach ($_donnees as $_user) 
+                        {
+
+                            $_SESSION['email'] = $_user['emailClient'];
+                            $_SESSION['nom'] = $_user['nomClient'];
+                            $_SESSION['prenom'] = $_user['prenomClient'];
+                            $_SESSION['age'] = $_user['ageClient'];
+                            $_SESSION['ville'] = $_user['villeClient'];
+                            $_SESSION['mdp'] = $_user['mdpClient'];
+                            $_SESSION['id'] = $_user['idClient'];
+
+                            print "<p class=\"success\"> Bienvenue ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
+                            print "<p class=\"success\"> Vous êtes connecté</p>";
+                            sleep(3);
+                            header('Location: ./index.php');
+                        }
                     }
-                    else
-                    {
-                        print "<p class=\"warning\"> Email ou mot de passe incorrect </p>";
-                    }
-                } 
         }
     }
 ?>
