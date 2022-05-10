@@ -49,6 +49,7 @@
     <p> &copy; Sports | Tous droits réservés - Djason Gadiou | </p>
 </footer>
 <script src="./js/app.js"></script>
+<script src="./js/changeUserInfos.js"></script>
 </body>
 
 </html>

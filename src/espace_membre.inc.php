@@ -1,6 +1,6 @@
 <?php
 
-if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email'])) 
+if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected'])) 
 {
     require_once './src/connect_DB.inc.php';
 
@@ -16,10 +16,11 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
         foreach ($_donnees as $_user) 
         {
             print
+            '<h2> Voici vos informations : </h2>' .
                 '<table>'
                     .'<tr>'
                         .'<th>Nom</th>'
-                        .'<th>Prenom</th>'
+                        .'<th>Prénom</th>'
                         .'<th>Email</th>'
                         .'<th>Âge</th>'
                         .'<th>Ville</th>'
@@ -33,10 +34,47 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
                     .'</tr>'
                 .'</table>';
         }
+            print 
+            '<a id="changeInfos" href="#userInfosForm">Modifier mes informations</a>'
+
+            // Feature not totally implemented yet
+            //.'<a id="deleteUser" href="#">Supprimer mon compte</a>'
+            ;
+
+            include_once './src/change_infos.inc.php';
+            
+            print '<form id="userInfosForm" action="#" method="post">'
+                .'<label for="nom">Modifier votre nom : </label>'
+                .'<input type="text" id="nom" name="nom" value="'.$_SESSION['nom'].'" required autofocus>'
+                .'<label for="prenom">Modifier votre prénom : </label>'
+                .'<input type="text" id="prenom" name="prenom" value="'.$_SESSION['prenom'].'" required autofocus>'
+    
+                .'<label for="email">Modifier votre âge : </label>'
+                .'<input type="text" name="age" id="age" value="'.$_SESSION['age'].'" required autofocus>'
+    
+                .'<label for="ville">Modifier votre ville : </label>'
+                .'<input type="ville" id="ville" name="ville" value="'.$_SESSION['ville'].'" required autofocus>'
+    
+                .'<label for="email">Modifier votre e-mail : </label>'
+                .'<input type="email" id="email" name="email" value="'.$_SESSION['email'].'" required autofocus>'
+    
+                .'<label for="mdp">Modifier votre mot de passe : </label>'
+                .'<input type="password" id="mdp" name="mdp" value="'.$_SESSION['mdp'].'" required autofocus>'
+    
+                .'<input name="change" type="submit" value="Envoyer">'
+    
+            .'</form>';
+
+            print '<form id="deleteForm" action="./src/delete_user.inc.php" method="post">'
+            .'<label for="email">Veuillez entrez votre e-mail : </label>'
+            .'<input type="email" id="email" name="email" placeholder="Email .." required autofocus>'
+
+            .'<label for="mdp">Veuillez entrez mot de passe : </label>'
+            .'<input type="password" id="mdp" name="mdp" placeholder="Mot de passe .." required autofocus>'
+
+            .'<input name="delete" type="submit" value="Supprimer">'
+
+        .'</form>';
+        }
     }
-}
-else 
-{
-    print "<p class=\"warning\"> Veuillez vous connecter pour accéder à cette page </p>";
-}
 ?>        

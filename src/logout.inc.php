@@ -1,6 +1,6 @@
 <?php 
 ob_start();
-if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
+if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected']))
     {
         session_destroy();
         header('Location: ./');

@@ -54,6 +54,7 @@ section {
 section ul li img {
     transition-duration: .25s;
     border: solid .4rem var(--color-default);
+    height: 35vh;
 }
 
 .material-icons{
@@ -124,6 +125,10 @@ header a[id="logout"] {
     border: solid var(--color-primary);
     border-radius: 1rem;
     padding: 1rem;
+    margin: 1rem;
+    /* position: absolute;
+    top: 6rem;
+    right: 2rem; */
 }
 header a[id="logout"]:hover {
     background-color: var(--color-primary);
@@ -139,6 +144,9 @@ header a[id="user"] {
     border: solid var(--color-primary);
     border-radius: 1rem;
     padding: 1rem;
+    /* position: absolute;
+    top: 2rem;
+    right: 5rem; */
 }
 header a[id="user"]:hover {
     background-color: var(--color-primary);
@@ -147,6 +155,7 @@ header a[id="user"]:hover {
     border-radius: 1rem;
     padding: 1rem;
 }
+
 
 /* End Header CSS */
 
@@ -321,6 +330,31 @@ footer p{
         display: block;
         float: none;
     }
+    header a[id="logout"] {
+        background-color: var(--color-background-secondary);
+        color: rgb(0, 0, 0);
+        border: solid var(--color-primary);
+        border-radius: 1rem;
+        padding: 1rem;
+        position: absolute;
+        top: 2rem;
+        right: 5rem;
+    }
+    header p[id="welcome_text"] {
+        position: absolute;
+        top: 7rem;
+        left: 5rem;
+    }
+    header a[id="user"] {
+        background-color: var(--color-background-secondary);
+        color: rgb(0, 0, 0);
+        border: solid var(--color-primary);
+        border-radius: 1rem;
+        padding: 1rem;
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
     header em {
         display: table;
     } 
@@ -334,7 +368,7 @@ footer p{
         margin: 0 auto;
     }
     main section ul li img {
-        max-width: 20rem;
+        height: 25vh;
     }
     main .grid-picture-large {
         display: grid;

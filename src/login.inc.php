@@ -18,34 +18,32 @@ require_once './src/connect_DB.inc.php';
                 }
                 else 
                 {
-                    $_req = $_bdd->prepare("SELECT nomClient, prenomClient, emailClient FROM client WHERE emailClient = :email AND mdpClient = :mdp");
-                    $_req -> execute(array(
-                        'email' => $_email
-                        ,'mdp' => $_mdp
-                    ));
-                    $_verify = $_req->fetch(PDO::FETCH_ASSOC);
+                    $_req = $_bdd->prepare("SELECT * FROM client WHERE emailClient = :email");
+                    $_req -> BindValue('email', $_email);
+                    $_req->execute();
+                    while ($_donnees = $_req->fetch()) {
+                        if (password_verify($_mdp, $_donnees['mdpClient'])) {
+                            $_SESSION['id'] = $_donnees['idClient'];
+                            $_SESSION['email'] = $_donnees['emailClient'];
+                            $_SESSION['nom'] = $_donnees['nomClient'];
+                            $_SESSION['prenom'] = $_donnees['prenomClient'];
+                            $_SESSION['age'] = $_donnees['ageClient'];
+                            $_SESSION['ville'] = $_donnees['villeClient'];
+                            $_SESSION['mdp'] = $_donnees['mdpClient'];
+                            $_SESSION['connected'] = true;
+                            print "<p class=\"success\"> Vous êtes connecté </p>";
+                            print_r($_SESSION);
 
-                    if ($_req || password_verify($_mdp, $_verify['mdpClient']))
-                    {
-                        $_donnees = $_req->fetchAll();
-
-                        foreach ($_donnees as $_user) 
-                        {
-
-                            $_SESSION['email'] = $_user['emailClient'];
-                            $_SESSION['nom'] = $_user['nomClient'];
-                            $_SESSION['prenom'] = $_user['prenomClient'];
-                            $_SESSION['age'] = $_user['ageClient'];
-                            $_SESSION['ville'] = $_user['villeClient'];
-                            $_SESSION['mdp'] = $_user['mdpClient'];
-                            $_SESSION['id'] = $_user['idClient'];
-
-                            print "<p class=\"success\"> Bienvenue ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
-                            print "<p class=\"success\"> Vous êtes connecté</p>";
-                            sleep(3);
+                            sleep(2);
                             header('Location: ./index.php');
+
+                        }
+                        else 
+                        {
+                            print "<p class=\"warning\"> Email ou mot de passe incorrect </p>";
                         }
                     }
+                }
+            }
         }
-    }
 ?>
