@@ -1,5 +1,4 @@
 <?php
-    include_once './src/header.inc.php'; 
     if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
     {
         header ('Location: ./');
@@ -7,7 +6,7 @@
     
     fetchEventInfos(1, $_fetchEventRequest);
         
-    include_once './src/formulaire_verif.inc.php'; 
+    include_once './includes/formulaire_verif.inc.php'; 
 ?>   
                 
         <form action="#" method="post">
@@ -32,6 +31,3 @@
             <input type="submit" value="Envoyer">
 
         </form>
-<?php 
-    include_once './src/footer.inc.php'; 
-?>

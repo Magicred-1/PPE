@@ -1,9 +1,7 @@
 <?php
-
-if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected'])) 
-{
-    require_once './src/connect_DB.inc.php';
-
+    require_once './includes/connect_DB.inc.php';
+    if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected'])) 
+    {   
     $_emailUser = $_SESSION['email'];
     $_req = $_bdd->prepare("SELECT nomClient, prenomClient, emailClient, ageClient, villeClient FROM client WHERE emailClient = :email");
     $_req -> execute(array(
@@ -41,7 +39,7 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected']))
             //.'<a id="deleteUser" href="#">Supprimer mon compte</a>'
             ;
 
-            include_once './src/change_infos.inc.php';
+            include_once './includes/change_infos.inc.php';
             
             print '<form id="userInfosForm" action="#" method="post">'
                 .'<label for="nom">Modifier votre nom : </label>'
@@ -65,7 +63,7 @@ if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected']))
     
             .'</form>';
 
-            print '<form id="deleteForm" action="./src/delete_user.inc.php" method="post">'
+            print '<form id="deleteForm" action="./includes/delete_user.inc.php" method="post">'
             .'<label for="email">Veuillez entrez votre e-mail : </label>'
             .'<input type="email" id="email" name="email" placeholder="Email .." required autofocus>'
 

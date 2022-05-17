@@ -1,6 +1,10 @@
 <?php 
-    include_once './src/header.inc.php';
+    include_once './includes/header.inc.php';
     fetchEventInfos(1, $_fetchEventRequest);
+    if (session_status() == PHP_SESSION_NONE && !isset($_SESSION['connected']))
+    {
+        header ('Location: ./');
+    }
 ?>
 
 
@@ -26,7 +30,3 @@
             <input type="submit" value="Envoyer">
 
         </form>
-<?php 
-    
-    include_once './src/footer.inc.php';
-?>

@@ -337,7 +337,7 @@ footer p{
         border-radius: 1rem;
         padding: 1rem;
         position: absolute;
-        top: 2rem;
+        top: 1rem;
         right: 5rem;
     }
     header p[id="welcome_text"] {

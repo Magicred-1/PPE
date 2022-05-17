@@ -1,7 +1,5 @@
 <?php 
-    require_once './src/connect_DB.inc.php';
-    require_once './src/get_date_event_user.inc.php';
-
+        require_once './includes/connect_DB.inc.php';
         $_fetchEventRequest = $_bdd->prepare('SELECT * FROM evenement ORDER BY idEvenement ASC');
         $_fetchEventRequest -> execute();
 
@@ -28,9 +26,9 @@
                                 print "<img src=\"{$_imageInfos['imageEvenement']}\" alt=\"{$_imageInfos['descEvenement']}\">";
                                 print '<figcaption>';
                                     print '<h2>';
+                                        print "<a href=\"?idEvenement={$_imageInfos['idEvenement']}\"";
                                         print "<i class=\"fa-solid fa-magnifying-glass\" aria-hidden=\"true\"></i>";
-                                        print "<a href=\"?idEvent={$_imageInfos['idEvenement']}\">";
-                                            print "<em class=\"fa-solid fa-page\"></em> Agrandir";
+                                        print "<em class=\"fa-solid fa-page\"></em> Agrandir";
                                         print "</a>";
                                     print '</h2>';
                                 print "</figcaption>";

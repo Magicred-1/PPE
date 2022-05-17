@@ -1,7 +1,8 @@
 <?php
 try {
+    // On se connecte à MySQL
         $_host = "localhost";
-        $_dbname = "ppe_web";
+        $_dbname = "ppe_web_mvc";
         $_user = "root";
         $_password = getenv('MYSQL_SECURE_PASSWORD');
 

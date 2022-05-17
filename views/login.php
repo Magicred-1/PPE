@@ -1,12 +1,13 @@
 <?php 
-    include_once './src/header.inc.php'; 
-    if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['email']))
+    include_once './includes/header.inc.php'; 
+    if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected']))
     {
         header ('Location: ./');
     }
+    
     fetchEventInfos(1, $_fetchEventRequest);
         
-    include_once './src/login.inc.php'; 
+    include_once './includes/login.inc.php'; 
 ?>
       
         <form action="#" method="post">
@@ -19,5 +20,3 @@
             <input type="submit" name="submit" value="Envoyer">
 
         </form>
-
-<?php include_once './src/footer.inc.php'; ?>

@@ -1,5 +1,5 @@
 <?php
-require_once './src/connect_DB.inc.php';
+require_once './includes/connect_DB.inc.php';
 
         if(isset($_POST['email']) && isset($_POST['mdp']))
         {
@@ -35,7 +35,7 @@ require_once './src/connect_DB.inc.php';
                             print_r($_SESSION);
 
                             sleep(2);
-                            header('Location: ./index.php');
+                            header('Location: ?page=home');
 
                         }
                         else 

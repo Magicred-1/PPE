@@ -15,7 +15,7 @@
 </main>
 <footer>
     <div class="cate">
-        <img src="./asset/img/sports_icon.png" alt="Sports Icon" />
+        <img src="./assets/img/sports_icon.png" alt="Sports Icon" />
         <section>
             <h2>Tournois nationaux</h2>
             <ul>

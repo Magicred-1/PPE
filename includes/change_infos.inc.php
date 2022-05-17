@@ -1,5 +1,5 @@
 <?php
-    require_once './src/connect_DB.inc.php';
+    require_once './includes/connect_DB.inc.php';
 
     if (!empty($_POST) && isset($_SESSION['nom']) && isset($_SESSION['email']) && isset($_SESSION['prenom']) && isset($_SESSION['age']) && isset($_SESSION['ville']) && isset($_SESSION['mdp'])) {
         $_nom = $_POST['nom'];
@@ -23,7 +23,7 @@
         if ($_req) {
             print "<section>
             <p class=\"success\"> Vos informations ont bien été modifiées </p>";
-            print "<a href=\"./espace_membre.php\"> Retour à l'espace membre </a>
+            print "<a href=\"?page=member_panel\"> Retour à l'espace membre </a>
             </section>";
         }
     }
