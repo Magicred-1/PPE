@@ -182,6 +182,7 @@ main section p {
 }
 main h2 {
     text-align: center;
+    color: var(--color-default);
 }
 main p {
     padding: 3rem;

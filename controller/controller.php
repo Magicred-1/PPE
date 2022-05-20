@@ -1,7 +1,8 @@
 <?php 
     if(isset($_GET['page'])) {
                 $page = $_GET['page'];
-                switch($page) {
+                switch($page) 
+                {
                     case 'login':
                         include_once './views/login.php';
                         break;
@@ -21,7 +22,9 @@
                         include_once './views/home.php';
                         break;
                 }
-            } else {
+            } 
+            else 
+            {
                 include_once './views/home.php';
             }
 ?>

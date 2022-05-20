@@ -27,8 +27,8 @@
                                 print '<figcaption>';
                                     print '<h2>';
                                         print "<a href=\"?idEvenement={$_imageInfos['idEvenement']}\"";
-                                        print "<i class=\"fa-solid fa-magnifying-glass\" aria-hidden=\"true\"></i>";
-                                        print "<em class=\"fa-solid fa-page\"></em> Agrandir";
+                                            print "<i class=\"fa-solid fa-magnifying-glass\" aria-hidden=\"true\"></i>";
+                                            print "<em class=\"fa-solid fa-page\"></em> Agrandir";
                                         print "</a>";
                                     print '</h2>';
                                 print "</figcaption>";

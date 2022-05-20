@@ -56,9 +56,9 @@
                                     $_SESSION['connected'] = true;
                                     print "<p class=\"success\"> Vous êtes connecté </p>";
                                     print_r($_SESSION);
-        
+
                                     sleep(2);
-                                    header('Location: ./index.php');
+                                    header('Location: ?page=home');
                                 }
                         }
                     }
