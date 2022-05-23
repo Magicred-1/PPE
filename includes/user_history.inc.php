@@ -24,15 +24,22 @@
                     .'</tr>';
                     foreach ($_donnees as $_userHistory) 
                     {
-                        print
-                        '<tr>'
-                            .'<td>'.$_userHistory['nomEvenement'].'</td>'
-                            .'<td>'.$_userHistory['descEvenement'].'</td>'
-                            .'<td>'.$_userHistory['dateConsultation'].'</td>'
-                        .'</tr>';
+                        if ($_userHistory != null) 
+                        {
+                            print
+                            '<tr>'
+                                .'<td>'.$_userHistory['nomEvenement'].'</td>'
+                                .'<td>'.$_userHistory['descEvenement'].'</td>'
+                                .'<td>'.$_userHistory['dateConsultation'].'</td>'
+                            .'</tr>';
+                        }
+                        else 
+                        {
+                            print '<p class="warning"> Vous n\'avez consulté aucun événement </p>';
+                        }
                     }
                     print '</tr>'
                 .'</table>';
         }
     }
-?>
+?> 

@@ -17,7 +17,7 @@
                     ));
                     $_result = $_verif->rowCount();
                     if ($_result > 0) {
-                        die("<p class=\"warning\"> Vous êtes déjà inscrit </p> <a href=\"./formulaire.php\"> Retour à la page d'inscription </a>");
+                        die("<p class=\"warning\"> Vous êtes déjà inscrit </p> <a href=\"./?page=register\"> Retour à la page d'inscription </a>");
                     }
 
 

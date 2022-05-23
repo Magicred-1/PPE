@@ -31,9 +31,10 @@ require_once './includes/connect_DB.inc.php';
                             $_SESSION['ville'] = $_donnees['villeClient'];
                             $_SESSION['mdp'] = $_donnees['mdpClient'];
                             $_SESSION['connected'] = true;
+                            print "<p class=\"success\"> Vous êtes connecté !</p>";
                             print_r($_SESSION);
-                            header('Location: ?page=home');
 
+                            header('Location: ?page=home');
                         }
                         else 
                         {

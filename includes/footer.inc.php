@@ -1,5 +1,5 @@
 <!-- modale -->
-<div class="parent-modale" role="dialog" aria-label="true">
+<div id="modale" class="parent-modale" role="dialog" aria-label="true">
     <figure class="modale">
         <button aria-label="closed">
             <i class="fa-solid fa-times" aria-hidden="true"></i>
@@ -50,6 +50,7 @@
 </footer>
 <script src="./js/app.js"></script>
 <script src="./js/changeUserInfos.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

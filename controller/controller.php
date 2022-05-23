@@ -15,9 +15,6 @@
                     case 'member_panel':
                         include_once './views/espace_membre.php';
                         break;
-                    case 'edit_account':
-                        include_once './views/modifier_utilisateur.php';
-                        break;
                     default:
                         include_once './views/home.php';
                         break;

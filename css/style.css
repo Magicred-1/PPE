@@ -72,7 +72,7 @@ section ul li img {
 }
 
 html {
-    background: linear-gradient(rgba(27, 14, 209, 0.3),transparent), url(../asset/img/sports_background.jpg) no-repeat scroll center center / cover;
+    background: linear-gradient(rgba(27, 14, 209, 0.3),transparent), url(../assets/img/sports_background.jpg) no-repeat scroll center center / cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -247,6 +247,7 @@ input[type="submit"] {
     }
 input[type="submit"]:hover {
         color: var(--color-default);
+        background-color: var(--color-primary);
         transition: all .2s ease-in;
 }
 table, td, th {
