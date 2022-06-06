@@ -1,5 +1,4 @@
 <?php 
-    include_once './includes/header.inc.php';
     fetchEventInfos(1, $_fetchEventRequest);
     if (session_status() == PHP_SESSION_NONE && !isset($_SESSION['connected']))
     {

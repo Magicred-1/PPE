@@ -1,5 +1,4 @@
 <?php 
-    include_once './includes/header.inc.php'; 
     if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected']))
     {
         header ('Location: ./');

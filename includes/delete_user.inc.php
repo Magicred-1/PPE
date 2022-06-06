@@ -1,29 +1,39 @@
 <?php
     require_once './includes/connect_DB.inc.php';
 
-    if (!empty($_POST) && isset($_SESSION['email']) && isset($_SESSION['mdp'])) {
-        $_email = $_SESSION['email'];
+    /*  
+    we check if the user is connected and the infos 
+    submitted are correct to delete the user account
+    */
+    if (!empty($_POST['delete']) && isset($_SESSION['email']) && isset($_SESSION['mdp'])) {
+        $_email = $_POST['email'];
         $_mdp = $_POST['mdp'];
-        $_mdp = password_hash($_mdp, PASSWORD_BCRYPT);
 
-        $_req = $_bdd->prepare("DELETE * FROM client WHERE emailClient = :email AND mdpClient = :mdp");
+        /* 
+            we check if the user exist in the database
+            the infos submitted are correct to delete the user account
+        */
+        $_req = $_bdd->prepare("SELECT * FROM client WHERE emailClient = :email");
         $_req -> execute(array(
-            'mdp' => $_mdp,
             'email' => $_email
         ));
-
-        if ($_req) {
-            print "<section>
-                <p class=\"success\"> Votre compte a été supprimée avec succès </p>
-            </section>";
-            sleep(2);
+        // printf("<p class=\"success\">%s</p>", $_req->rowCount());
+        $_verif = $_req->fetch();
+            // we delete the user account
+        if (password_verify($_mdp, $_verif['mdpClient'])) {
+            $_req = $_bdd->prepare("DELETE FROM client WHERE emailClient = :email");
+            $_req -> execute(array(
+                'email' => $_email
+            ));
+            print "<p class=\"success\"> Votre compte a bien été supprimé !</p>";
+            sleep(3);
             session_destroy();
         }
-        else
-        {
-            print "<section>
-            <p class=\"error\"> Votre compte n'a pas pu être supprimée </p>
-            </section>";
-        }
+    }
+    else
+    {
+        print "<section>
+            <p class=\"warning\"> Vous n'êtes pas connecté ou les informations saisies sont incorrectes </p>
+        </section>";
     }
 ?>

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", e => {
     console.log(navigator.userAgent);
 
-    let el, modal, closed, register_button, open_modal, closed_all, closed_outside, body;
+    let el, modal, closed, open_modal, closed_all, closed_outside, body, register_button;
     
     closed_outside = document.getElementById("modale");
     el = document.querySelectorAll(".grid-picture-large li");
-    register_button = document.querySelector(".register_button");
+    btn = document.querySelector("main .grid-picture-large");
     modal = document.querySelector(".parent-modale");
     closed = document.querySelector(".modale button");
     closed_all = document.querySelector(".modale img");
@@ -51,14 +51,6 @@ document.addEventListener("DOMContentLoaded", e => {
         modal.classList.remove("modale-active");
         body.style = "overflow: scroll";
     });
-
-    register_button.addEventListener("click", () => {
-        Swal.fire({
-            title: 'Vous êtes inscrit à l\'événement',
-            icon: 'question',
-          });
-    });
-    console.log(register_button);
 
     
 

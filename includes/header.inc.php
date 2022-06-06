@@ -33,6 +33,7 @@
             <a id="logout" href="?page=logout"><i class="fa fa-sign-out-alt"></i> Déconnexion</a> 
             <a id="user" href="?page=member_panel"><i class="fa fa-user"></i> Espace Membre</a></p>' 
             : print '<p><a id="logout" href="?page=login"><i class="fa fa-sign-in-alt"></i> Connexion</a></p>';
+            isset ($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1 ? print '<a id="user" href="?page=admin_panel"><i class="fa fa-user-cog"></i> Espace Administrateur</a>' : '';
         ?>
     </header>
     <main>

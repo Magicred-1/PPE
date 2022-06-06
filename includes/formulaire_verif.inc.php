@@ -27,7 +27,8 @@
                         {
                             echo "<p class=\"warning\"> veuillez saisir des lettres</p>";
                         }
-                        if(!filter_var($_email, FILTER_VALIDATE_EMAIL)) {
+                        if(!filter_var($_email, FILTER_VALIDATE_EMAIL)) 
+                        {
                             echo "<p class=\"warning\"> veuillez saisir un email valide</p>";
                         }
                         else 
@@ -43,25 +44,9 @@
                                 'mdp' => $_mdp
                             ));
 
-                            while ($_donnees = $_req->fetch(PDO::FETCH_ASSOC)) 
-                            {
-                                if (password_verify($_mdp, $_donnees['mdpClient'])) 
-                                {
-                                    $_SESSION['email'] = $_donnees['emailClient'];
-                                    $_SESSION['nom'] = $_donnees['nomClient'];
-                                    $_SESSION['prenom'] = $_donnees['prenomClient'];
-                                    $_SESSION['age'] = $_donnees['ageClient'];
-                                    $_SESSION['ville'] = $_donnees['villeClient'];
-                                    $_SESSION['mdp'] = $_donnees['mdpClient'];
-                                    $_SESSION['connected'] = true;
-                                    print "<p class=\"success\"> Vous êtes connecté </p>";
-                                    print_r($_SESSION);
-
-                                    sleep(2);
-                                    header('Location: ?page=home');
-                                }
+                            $_req->closeCursor();
+                            echo "<p class=\"success\"> Vous êtes inscrit, vous pouvez maintenant vous connecter. </p>";
                         }
                     }
-                }
-            }
+                    }
 ?>

@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="384" height="349" view_box="0 0 384 349"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sat, 28 May 2022 01:15:35</desc>
+
+<rect id="frame" x="0" y="0" width="384" height="349" fill="#ffffff" stroke="none" stroke-width="0"/>
+
+<!-- Association CONSULTER -->
+<line x1="55" y1="94" x2="184" y2="94" stroke="#878787" stroke-width="2"/>
+<text x="106" y="111.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="318" y1="94" x2="184" y2="94" stroke="#878787" stroke-width="2"/>
+<text x="234" y="111.0" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<line x1="184" y1="272" x2="184" y2="94" stroke="#878787" stroke-width="2"/>
+<text x="189.0" y="196" fill="#b2182b" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-CONSULTER">
+	<path d="M 215 69 a 14 14 90 0 1 14 14 V 94 h -90 V 83 a 14 14 90 0 1 14 -14" fill="#bababa" stroke="#bababa" stroke-width="0"/>
+	<path d="M 229 94.0 v 11 a 14 14 90 0 1 -14 14 H 153 a 14 14 90 0 1 -14 -14 V 94.0 H 90" fill="#e0e0e0" stroke="#e0e0e0" stroke-width="0"/>
+	<rect x="139" y="69" width="90" height="50" fill="none" rx="14" stroke="#878787" stroke-width="2"/>
+	<line x1="139" y1="94" x2="229" y2="94" stroke="#878787" stroke-width="1"/>
+	<text x="146" y="86.7" fill="#000000" font-family="Verdana" font-size="12">CONSULTER</text>
+</g>
+
+<!-- Entity DATE -->
+<g id="entity-DATE">
+	<g id="frame-DATE">
+		<rect x="261" y="52" width="114" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="261" y="77.0" width="114" height="59" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="261" y="52" width="114" height="84" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="261" y1="77" x2="375" y2="77" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="301" y="69.7" fill="#000000" font-family="Verdana" font-size="12">DATE</text>
+	<text x="266" y="94.8" fill="#000000" font-family="Verdana" font-size="12">dateConsultation</text>
+	<line x1="266" y1="97" x2="369" y2="97" stroke="#000000" stroke-width="1"/>
+	<text x="266" y="111.8" fill="#000000" font-family="Verdana" font-size="12">idClient</text>
+	<text x="266" y="128.8" fill="#000000" font-family="Verdana" font-size="12">idEvenement</text>
+</g>
+
+<!-- Entity CLIENT -->
+<g id="entity-CLIENT">
+	<g id="frame-CLIENT">
+		<rect x="9" y="9" width="92" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="9" y="34.0" width="92" height="145" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="9" y="9" width="92" height="170" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="9" y1="34" x2="101" y2="34" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="32" y="26.7" fill="#000000" font-family="Verdana" font-size="12">CLIENT</text>
+	<text x="14" y="51.7" fill="#000000" font-family="Verdana" font-size="12">idClient</text>
+	<line x1="14" y1="54" x2="60" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="68.7" fill="#000000" font-family="Verdana" font-size="12">nomClient</text>
+	<text x="14" y="85.7" fill="#000000" font-family="Verdana" font-size="12">prenomClient</text>
+	<text x="14" y="102.8" fill="#000000" font-family="Verdana" font-size="12">emailClient</text>
+	<text x="14" y="119.8" fill="#000000" font-family="Verdana" font-size="12">mdpClient</text>
+	<text x="14" y="136.8" fill="#000000" font-family="Verdana" font-size="12">ageClient</text>
+	<text x="14" y="153.8" fill="#000000" font-family="Verdana" font-size="12">villeClient</text>
+	<text x="14" y="170.8" fill="#000000" font-family="Verdana" font-size="12">isAdmin</text>
+</g>
+
+<!-- Entity EVENEMENT -->
+<g id="entity-EVENEMENT">
+	<g id="frame-EVENEMENT">
+		<rect x="87" y="204" width="194" height="25" fill="#f4a582" stroke="#f4a582" stroke-width="0"/>
+		<rect x="87" y="229.0" width="194" height="111" fill="#fddbc7" stroke="#fddbc7" stroke-width="0"/>
+		<rect x="87" y="204" width="194" height="136" fill="none" stroke="#d6604d" stroke-width="2"/>
+		<line x1="87" y1="229" x2="281" y2="229" stroke="#d6604d" stroke-width="1"/>
+	</g>
+	<text x="146" y="221.7" fill="#000000" font-family="Verdana" font-size="12">EVENEMENT</text>
+	<text x="92" y="246.7" fill="#000000" font-family="Verdana" font-size="12">idEvenement</text>
+	<line x1="92" y1="249" x2="172" y2="249" stroke="#000000" stroke-width="1"/>
+	<text x="92" y="263.7" fill="#000000" font-family="Verdana" font-size="12">nomEvenement</text>
+	<text x="92" y="280.8" fill="#000000" font-family="Verdana" font-size="12">descEvenement</text>
+	<text x="92" y="297.8" fill="#000000" font-family="Verdana" font-size="12">date_creation_evenement</text>
+	<text x="92" y="314.8" fill="#000000" font-family="Verdana" font-size="12">date_modification_evenement</text>
+	<text x="92" y="331.8" fill="#000000" font-family="Verdana" font-size="12">imageEvenement</text>
+</g>
+</svg>

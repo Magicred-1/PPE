@@ -196,6 +196,12 @@ main p.warning {
     border: solid rgb(59, 59, 59);
     font-weight: bold;
 }
+main p.success {
+    color: var(--color-success);
+    background-color: var(--color-background-secondary);
+    border: solid rgb(59, 59, 59);
+    font-weight: bold;
+}
 main a {
     padding: 2rem;
     background-color: var(--color-primary);
@@ -257,7 +263,7 @@ table, td, th {
     color: var(--color-primary);
   }
 
-td {
+table td {
     padding: 1rem;
 }
   
@@ -265,6 +271,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin: 0 0 1rem;
+    /* overflow-x: scroll; */
 }
 
 
@@ -416,7 +423,7 @@ ul figure figcaption{
     background-color: rgba(0,0,0,0.6);
     align-items: center;
     transform: scale(0);
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
     transform-origin: center center;
     cursor: pointer;
     color: #fff;

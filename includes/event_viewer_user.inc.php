@@ -12,5 +12,6 @@
             'idClient' => $_idClient,
             'idEvenement' => $_idEvenement
         ));
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 ?>

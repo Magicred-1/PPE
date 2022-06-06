@@ -1,17 +1,3 @@
-<!-- modale -->
-<div id="modale" class="parent-modale" role="dialog" aria-label="true">
-    <figure class="modale">
-        <button aria-label="closed">
-            <i class="fa-solid fa-times" aria-hidden="true"></i>
-        </button>
-        <img src="https://via.placeholder.com/500" alt="picture" />
-        <figcaption class="desc">
-            <h3>title</h3>
-            <p></p>
-            <time datetime="2022-03-20">Years :</time>
-        </figcaption>
-    </figure>
-</div>
 </main>
 <footer>
     <div class="cate">

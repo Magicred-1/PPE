@@ -1,5 +1,4 @@
 <?php
-    require_once './includes/connect_DB.inc.php';
     if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['connected'])) 
     {   
     $_emailUser = $_SESSION['email'];
@@ -33,11 +32,11 @@
                 .'</table>';
         }
             print 
+            // Button to change the infos of the user
             '<a id="changeInfos" href="#userInfosForm">Modifier mes informations</a>'
 
-            // Feature not totally implemented yet
-            //.'<a id="deleteUser" href="#">Supprimer mon compte</a>'
-            ;
+            // Button to open the form to delete user account
+            .'<a id="deleteUser" href="#deleteForm">Supprimer mon compte</a>';
 
             include_once './includes/change_infos.inc.php';
             
@@ -63,7 +62,7 @@
     
             .'</form>';
 
-            print '<form id="deleteForm" action="./includes/delete_user.inc.php" method="post">'
+            print '<form id="deleteForm" action="?page=delete_user" method="post">'
             .'<label for="email">Veuillez entrez votre e-mail : </label>'
             .'<input type="email" id="email" name="email" placeholder="Email .." required autofocus>'
 

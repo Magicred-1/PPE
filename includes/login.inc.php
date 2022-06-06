@@ -19,8 +19,11 @@ require_once './includes/connect_DB.inc.php';
                 else 
                 {
                     $_req = $_bdd->prepare("SELECT * FROM client WHERE emailClient = :email");
-                    $_req -> BindValue('email', $_email);
-                    $_req->execute();
+                    $_req->execute(
+                        array(
+                            'email' => $_email
+                        )
+                    );
                     while ($_donnees = $_req->fetch()) {
                         if (password_verify($_mdp, $_donnees['mdpClient'])) {
                             $_SESSION['id'] = $_donnees['idClient'];
@@ -30,6 +33,10 @@ require_once './includes/connect_DB.inc.php';
                             $_SESSION['age'] = $_donnees['ageClient'];
                             $_SESSION['ville'] = $_donnees['villeClient'];
                             $_SESSION['mdp'] = $_donnees['mdpClient'];
+                            
+                            // We verify if the user as admin rights
+                            $_SESSION['isAdmin'] = $_donnees['isAdmin'];
+
                             $_SESSION['connected'] = true;
                             print "<p class=\"success\"> Vous êtes connecté !</p>";
                             print_r($_SESSION);
