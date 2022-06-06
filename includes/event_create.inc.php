@@ -28,8 +28,8 @@
 											"<h1> {$_imageInfos['nomEvenement']}</h1>";
 											if (isset($_SESSION['connected']))
 											{
-												print "<a class=\"register_button\" href=\"{$_SERVER['HTTP_REFERER']}&event_register={$_imageInfos['idEvenement']}\">".
-													"<em class=\"fa-solid fa-page\"></em> S'inscrire";
+												print "<a class=\"register_button\" href=\"?event_register={$_imageInfos['idEvenement']}\">".
+													"<em class=\"fa-solid fa-plus\"></em> S'inscrire";
 											}
 										print
 										"</a>".

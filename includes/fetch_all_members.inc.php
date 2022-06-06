@@ -16,6 +16,7 @@
                 .'<th>Âge</th>'
                 .'<th>Ville</th>'
                 .'<th>Admin ?</th>'
+                .'<th>Actions</th>'
             .'</tr>';
 
         foreach ($_donnees as $_user) 
@@ -30,8 +31,7 @@
                 .'<td>'.$_user['ageClient'].'</td>'
                 .'<td>'.$_user['villeClient'].'</td>'
                 .'<td>'.$_admin.'</td>'
-                .'<td><a href="">Modifier</a></td>'
-                .'<td><a href="?page=admin_panel&deleteUser='.$_user['idClient'].'">Supprimer</a></td>'
+                .'<td><a href="#"><i class="fa fa-edit"></i> Modifier</a><a href="?page=admin_panel&deleteUser='.$_user['idClient'].'"><i class="fa fa-xmark"></i> Supprimer</a></td>'
                 .'</tr>';
         }
     print '</tr>'

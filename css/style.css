@@ -11,9 +11,21 @@ body{
   margin: 0;
   text-rendering: optimizeLegibility;
 }
-
 *{
     box-sizing: border-box; /* 100px largeur + 10px padding + 1px border */
+}
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-default) var(--color-background);
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    outline: .2rem solid rgb(255, 255, 255);
 }
 ul, 
 ol, 
@@ -271,7 +283,8 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin: 0 0 1rem;
-    /* overflow-x: scroll; */
+    /* overflow-x: scroll;
+    display: block; */
 }
 
 
@@ -331,6 +344,13 @@ footer p{
     font-style: italic;
 }
 @media screen and (max-width: 60rem){
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0 0 1rem;
+        overflow-x: scroll;
+        display: block;
+    }
     header{
         display: block;
     }

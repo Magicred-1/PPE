@@ -15,33 +15,46 @@
                 $_req = $_bdd->prepare("UPDATE client SET nomClient = :nom WHERE emailClient = :email");
                 $_req->BindValue('nom', $_nom);
                 $_req->BindValue('email', $_email);
-                $_req->execute();
+                $_req->execute(
+                    array(
+                        'nom' => $_nom,
+                        'email' => $_email
+                    )
+                );
                 $_SESSION['nom'] = $_nom;
                 break;
             // change the first name of the user in the database if the first name is not empty & if the first name is different from the current one
             case $_prenom != $_SESSION['prenom']:
                 $_req = $_bdd->prepare("UPDATE client SET prenomClient = :prenom WHERE emailClient = :email");
-                $_req -> BindValue('prenom', $_prenom);
-                $_req -> BindValue('email', $_email);
-                $_req->execute();
+                $_req->execute(
+                    array(
+                        'prenom' => $_prenom,
+                        'email' => $_email
+                    )
+                );
                 $_SESSION['prenom'] = $_prenom;
                 break;
 
             // change the age of the user in the database if the age is not empty & if the age is different from the current one
             case $_age != $_SESSION['age']:
                 $_req = $_bdd->prepare("UPDATE client SET ageClient = :age WHERE emailClient = :email");
-                $_req -> BindValue('age', $_age);
-                $_req -> BindValue('email', $_email);
-                $_req->execute();
+                $_req->execute(
+                    array(
+                        'age' => $_age,
+                        'email' => $_email
+                    )
+                );
                 $_SESSION['age'] = $_age;
                 break;
 
             // change the city of the user in the database if the city is not empty & if the city is different from the current one
             case $_ville != $_SESSION['ville']:
                 $_req = $_bdd->prepare("UPDATE client SET villeClient = :ville WHERE emailClient = :email");
-                $_req -> BindValue('ville', $_ville);
-                $_req -> BindValue('email', $_email);
-                $_req->execute();
+                $_req->execute(
+                    array(
+                    'ville' => $_ville,
+                    'email' => $_email
+                ));
                 $_SESSION['ville'] = $_ville;
                 break;
             
@@ -50,9 +63,11 @@
                 // hash the password to put in the database
                 $_mdp = password_hash($_mdp, PASSWORD_BCRYPT);
                 $_req = $_bdd->prepare("UPDATE client SET mdpClient = :mdp WHERE emailClient = :email");
-                $_req -> BindValue('mdp', $_mdp);
-                $_req -> BindValue('email', $_email);
-                $_req->execute();
+                $_req->execute(
+                    array(
+                    'mdp' => $_mdp,
+                    'email' => $_email
+                ));
                 // we update the user session with the new password
                 $_SESSION['mdp'] = $_mdp;
                 break;
