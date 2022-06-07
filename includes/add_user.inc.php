@@ -2,7 +2,7 @@
 if(isset($_GET['deleteUser']) && $_SESSION['isAdmin'] == 1) {
     if(isset($_SESSION['connected']) && $_SESSION['connected'] == true) {
         if($_SESSION['isAdmin'] == 1 && $_SESSION['id'] == $_GET['deleteUser']) {
-            printf($_SESSION['id'] .' '. $_GET['deleteUser']);
+            // printf($_SESSION['id'] .' '. $_GET['deleteUser']);
             print "<p class=\"warning\"> Vous ne pouvez pas supprimer votre propre compte admin.</p>";
         } 
         else 
@@ -15,7 +15,7 @@ if(isset($_GET['deleteUser']) && $_SESSION['isAdmin'] == 1) {
                 )
             );
             print "<p class=\"success\"> Utilisateur supprimé avec succès.</p>";
-            header('Refresh: 1; URL=?page=admin_panel');
+            header('Refresh: 2; URL=?page=admin_panel');
         }
     }
 } /* editUser implementation later

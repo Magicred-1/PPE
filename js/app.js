@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
     closed_outside.addEventListener("click", () => {
         modal.classList.remove("modale-active");
-        body.style = "overflow: scroll";
+        body.style = "overflow-y: scroll";
     });
 
     

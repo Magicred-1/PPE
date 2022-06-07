@@ -29,11 +29,13 @@
         <a href="?page=home"><img src="./assets/img/header_logo.png" alt="logo site streaming"></a>
         <h1><span> Maison des Ligues - Tous Les Sports</span></h1>
         <?php 
-            isset($_SESSION['connected']) ? print '<p id="welcome_text">Bienvenue, '.$_SESSION['prenom'].' '.$_SESSION['nom'].'  </p>'.'
-            <a id="logout" href="?page=logout"><i class="fa fa-sign-out-alt"></i> Déconnexion</a> 
-            <a id="user" href="?page=member_panel"><i class="fa fa-user"></i> Espace Membre</a></p>' 
-            : print '<p><a id="logout" href="?page=login"><i class="fa fa-sign-in-alt"></i> Connexion</a></p>';
-            isset ($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1 ? print '<a id="user" href="?page=admin_panel"><i class="fa fa-user-cog"></i> Espace Administrateur</a>' : '';
+            isset($_SESSION['connected']) ? print '<p id="welcome_text">Bienvenue, '.$_SESSION['prenom'].' '.$_SESSION['nom']. ' '.'  </p>'. '
+            <a id="user" href="?page=member_panel"><i class="fa fa-user-cog"></i> Espace Membre</a> <a id="logout" href="?page=logout"><i class="fa fa-sign-out-alt"></i> Déconnexion</a>'
+            : print '<a id="user" href="?page=login"><i class="fa fa-sign-in-alt"></i> Connexion</a>
+            <a id="user" href="?page=register"><i class="fa fa-user-plus"></i> Créer un compte</a>';
+
+            $_SESSION['isAdmin'] == 1 ? print '<a id="user" href="?page=admin_panel"><i class="fa fa-user-cog"></i> Espace Administrateur</a>' 
+            : '<a id="user" href="?page=member_panel"><i class="fa fa-user-cog"></i> Espace Membre</a>';
         ?>
     </header>
     <main>
