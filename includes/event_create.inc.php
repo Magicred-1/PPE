@@ -24,7 +24,11 @@
 									"<figure>".
 									"<img src=\"{$_imageInfos['imageEvenement']}\" alt=\"{$_imageInfos['descEvenement']}\">".
 									"<figcaption>".
-												"<i class=\"fa-solid fa-eye\"></i>".
+												"<i class=\"fa-solid fa-eye\"></i>";
+												if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1) {
+													print "2 inscrit(s)";
+												}
+											print
 											"<h1> {$_imageInfos['nomEvenement']}</h1>";
 											if (isset($_SESSION['connected']))
 											{

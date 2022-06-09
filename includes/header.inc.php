@@ -34,7 +34,7 @@
             : print '<a id="user" href="?page=login"><i class="fa fa-sign-in-alt"></i> Connexion</a>
             <a id="user" href="?page=register"><i class="fa fa-user-plus"></i> Créer un compte</a>';
 
-            $_SESSION['isAdmin'] == 1 ? print '<a id="user" href="?page=admin_panel"><i class="fa fa-user-cog"></i> Espace Administrateur</a>' 
+            isset ($_SESSION['connected']) && $_SESSION['isAdmin'] == 1 ? print '<a id="user" href="?page=admin_panel"><i class="fa fa-user-cog"></i> Espace Administrateur</a>' 
             : '<a id="user" href="?page=member_panel"><i class="fa fa-user-cog"></i> Espace Membre</a>';
         ?>
     </header>

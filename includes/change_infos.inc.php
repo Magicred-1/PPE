@@ -13,8 +13,6 @@
             // change the name of the user in the database if the name is not empty & if the name is different from the current one
             case $_nom != $_SESSION['nom']:
                 $_req = $_bdd->prepare("UPDATE client SET nomClient = :nom WHERE emailClient = :email");
-                $_req->BindValue('nom', $_nom);
-                $_req->BindValue('email', $_email);
                 $_req->execute(
                     array(
                         'nom' => $_nom,
